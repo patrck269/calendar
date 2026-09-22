@@ -506,3 +506,73 @@ Is `2026-09-21` with a trailing tab a valid day? Strip remove the tab too. It be
 ## 20. If you are Grug, reading this next year
 
 Wake the program from the project folder with `python -m calendar_app`. Type `2`. Type the day as `YYYY-MM-DD`. Read the list. The blank line under the list is on purpose. Type `4` when you are done. If you need to throw one line away, type `3`, same day, then the number Grug showed. If Grug say the file has a line Grug can't read, open `calendar.txt`, find the line that is not a real date, a tab, and some text, and fix that line before you delete. Your appointments are in that file beside the code, and they are not on GitHub unless you later tell Grug to put them there.
+
+---
+
+## 21. Doc Brown's journal: the day history was rewritten
+
+Grug wrote the manual. I, Emmett Brown, am only appending these pages. I will not put a workshop address, a neighbor's project, or an account name in them. That was the whole accident.
+
+### 21 September 2026, 1:21 a.m., the laboratory clock is a liar
+
+Great Scott. I opened the published manuscript and the design note, and there they were: coordinates. Not latitude. A disk path. The name of the folder where the calendar lives on one particular machine, written in backticks as if it were a law of nature. A sentence about the program next door. A login, spelled out, as though the remote were a street sign.
+
+The tip of `main` had already been corrected. The current pages said "project folder" and stopped there. I congratulated the correction. Then I looked *backward*, which is a hobby of mine, and the congratulations died.
+
+Four earlier versions of the same papers still carried the coordinates. Anyone who walked the history, commit by commit, could read the path. A correction on the newest page does not erase the older pages. It only staples an apology on top of them. The apology itself even described the erasure, which is a fine way to remind the future exactly what was removed.
+
+I wrote in the margin: do not rewrite history unless ordered. Rewriting a published branch is a forced update. The old coordinates remain reachable by their old commit names until the host forgets unreachable objects. I stopped. I waited for the order.
+
+### 21 September 2026, later, the order arrives
+
+The order was not subtle. Rewrite history. Then, because subtle had already failed once: use the DeLorean.
+
+I plotted the trip.
+
+Five commits sat on `main`. The first four contained the design note with the path. The fourth also contained this README, path and all. The fifth existed only to take the path back out. That fifth commit was the correction I had just praised. It was also proof that praise is not a substitute for a clean timeline.
+
+The safe route was not to delete the repository and pretend. The safe route was to visit each commit, edit only the sentences that named the machine, and leave every other byte alone. I rehearsed the edit on copies of the old pages first. After the rehearsal, those copies matched the clean pages already at the tip, character for character. Only then did I let the car move.
+
+What the edit removed, and nothing else:
+
+- The absolute folder path, everywhere it had been written as the home of this program.
+- The sentence that pointed at another program living in the next folder.
+- The account name that had been typed into the Git chapter.
+
+What the edit did not touch: the program, the tests, the file format, the menu, the appointment file. `calendar.txt` was never in the history. It stays off the remote. Eighty hundred random days and the twenty-five thousand sentences dated the twenty-second are still local. The DeLorean does not haul the filing cabinet.
+
+### The trip itself
+
+I sent the car through all five commits, root first. At each stop the same small tool ran. If a page still had a forbidden sentence, the sentence was replaced with the wording already approved on the clean tip. If a page was already clean, the tool did nothing. Line endings stayed line feeds. No new chapter was invented inside the old commits. Grug's voice in those chapters is still Grug's voice. I only stole the coordinates out of his mouth.
+
+Then the interesting part, which I should have predicted. The fifth commit's only job was to turn the dirty pages into the clean pages. After the earlier stops had already been cleaned, that fifth commit had nothing left to change. An empty trip is not a trip. The history discarded it. Four commits remain, with the same messages as before:
+
+1. The design note.
+2. The program and the tests.
+3. The blank line after a day's listing.
+4. This README, now born clean, coordinates never having been in it.
+
+The branch name is still `main`. I did not open a side road. I did not fork anyone. I replaced the published `main` with the new chain, and only because the remote still pointed at the chain I had published. If someone else had added a commit in the interval, the push would have refused. They had not. The update went through.
+
+### What a force update does, and what it does not
+
+On the branch, the old chain is no longer the way home. A fresh clone of `main` walks four commits and never reads a disk path. I checked every file in every remaining commit for the path, for the neighbor program, and for the account name. None of them are there.
+
+What I cannot promise is amnesia in the host. A remote keeps unreachable commits until it collects its garbage. Anyone who saved an old commit name can still ask the host for that object until the host forgets it. I am not writing those old names in this journal. Writing them down would be a map. If the host still has them, time will take them, or an administrator will. I will not help.
+
+Local backup pointers that the rewrite leaves behind were removed before the push, so a careless push of every ref would not drag the dirty chain back up. The appointment file on disk was measured after the trip. It was still there. Same cabinet. New history.
+
+### Standing order, taped to the flux capacitor
+
+Future me, and future Grug, if you are reading this with a pen in your hand:
+
+- Write "the project folder." Do not write the machine's path.
+- Do not name the program in the next room.
+- Do not write an account name into the manual. The remote already knows who owns it.
+- A fix on the newest commit is not a fix of the past. If a secret or a path was published, the past has to be visited, or the secret lives in the log forever.
+- Do not print the names of the discarded commits in the book that replaces them.
+- `calendar.txt` does not go up with the code.
+
+The clock is wrong on purpose. The history, as of this entry, is not.
+
+Einstein says the dog approves, which means nothing, but I am writing it down anyway. Great Scott, I need coffee. The calendar can remind me. It cannot remind me of a path I have sworn not to type.
