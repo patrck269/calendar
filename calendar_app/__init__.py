@@ -1,0 +1,1 @@
+"""Interactive text-file calendar."""

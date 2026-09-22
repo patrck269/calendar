@@ -1,0 +1,12 @@
+[project]
+name = "calendar-app"
+version = "0.1.0"
+description = "Interactive text-file calendar"
+requires-python = ">=3.11"
+
+[tool.setuptools.packages.find]
+include = ["calendar_app*"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
