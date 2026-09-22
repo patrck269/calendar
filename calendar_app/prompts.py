@@ -155,6 +155,7 @@ def _lookup(
         output_fn("No appointments.")
     if view.ignored_bad_line:
         output_fn("Ignored a bad line in calendar.txt.")
+    output_fn("")
 
 
 def _delete(

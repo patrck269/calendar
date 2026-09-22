@@ -156,6 +156,18 @@ def test_quit_leaves_existing_bytes_unchanged(tmp_path: Path) -> None:
     assert path.read_bytes() == payload
 
 
+def test_lookup_readout_is_followed_by_a_blank_line(tmp_path: Path) -> None:
+    path = tmp_path / "calendar.txt"
+    outputs = _drive(
+        path,
+        ["1", "2026-09-21", "Dentist at 2pm", "2", "2026-09-21", "4"],
+    )
+
+    listing = outputs.index("1. Dentist at 2pm")
+    assert outputs[listing + 1] == ""
+    assert outputs[listing + 2] == "1. Add"
+
+
 def test_lookup_reports_a_bad_line_and_delete_refuses(tmp_path: Path) -> None:
     path = tmp_path / "calendar.txt"
     payload = b"2026-09-21\tDentist at 2pm\nnot a line\n"
